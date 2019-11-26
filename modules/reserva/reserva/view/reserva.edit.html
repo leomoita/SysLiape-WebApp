@@ -54,7 +54,7 @@
                                             <div class="form-group">
                                                 <label>Hora Início</label>
                                                 <input type="time" class="form-control"
-                                                    ng-model="detalhe.horarioInicio">
+                                                    ng-model="detalhe.horaInicio">
                                             </div>
                                         </div>
 
@@ -62,7 +62,7 @@
                                             <div class="form-group">
                                                 <label>Hora Término</label>
                                                 <input type="time" class="form-control"
-                                                    ng-model="detalhe.horarioTermino">
+                                                    ng-model="detalhe.horaTermino">
                                             </div>
                                         </div>
 
@@ -70,7 +70,7 @@
                                             <div class="form-group">
                                                 <label class="form-control-label">Dia</label>
                                                 <select style="background-color: #27293d;" class="form-control"
-                                                    ng-model="reserva.detalhes.dia"
+                                                    ng-model="detalhe.dia"
                                                     ng-options="o.valor as o.texto for o in opcoesCombo" required>
                                                     <option value="" disabled>Selecione</option>
                                                 </select>
@@ -112,10 +112,10 @@
                                                         {{detalhe.id}}
                                                     </td>
                                                     <td>
-                                                        {{detalhe.horaInicio}}
+                                                        {{detalhe.horaInicio | date:'HH:mm'}}
                                                     </td>
                                                     <td>
-                                                        {{detalhe.horaTermino}}
+                                                        {{detalhe.horaTermino | date:'HH:mm'}}
                                                     </td>
                                                     <td>
                                                         {{detalhe.descricaoDia}}

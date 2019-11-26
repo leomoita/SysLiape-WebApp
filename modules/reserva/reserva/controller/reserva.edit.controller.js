@@ -7,6 +7,7 @@
     $scope,
     $location,
     $routeParams,
+    $route,
     reservaService
   ) {
     $scope.reserva = {
@@ -22,8 +23,8 @@
 
     $scope.detalhe = {
       idReserva: $routeParams.id,
-      horarioTermino: undefined,
-      horarioInicio: undefined,
+      horaTermino: undefined,
+      horaInicio: undefined,
       dia: undefined
     };
 
@@ -65,6 +66,8 @@
     $scope.desassociar = desassociar;
 
     function associar(detalhe) {
+      detalhe.horaInicio.setHours(detalhe.horaInicio.getHours() - 3);
+      detalhe.horaTermino.setHours(detalhe.horaTermino.getHours() - 3);
       reservaService
         .associar(detalhe)
         .then(function (retorno) {

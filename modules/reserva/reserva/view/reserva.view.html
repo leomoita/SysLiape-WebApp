@@ -73,13 +73,13 @@
                                                             {{detalhe.id}}
                                                         </td>
                                                         <td>
-                                                            {{detalhe.horaInicio}}
+                                                            {{detalhe.horaInicio | date:'HH:mm'}}
                                                         </td>
                                                         <td>
-                                                            {{detalhe.horaTermino}}
+                                                            {{detalhe.horaTermino | date:'HH:mm'}}
                                                         </td>
                                                         <td>
-                                                            {{detalhes.descricaoDia}}
+                                                            {{detalhe.descricaoDia}}
                                                         </td>
                                                     </tr>
     
