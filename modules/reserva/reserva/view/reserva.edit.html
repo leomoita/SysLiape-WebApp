@@ -107,23 +107,23 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <tr ng-repeat="reserva in reservas">
+                                                <tr ng-repeat="detalhe in detalhes">
                                                     <td>
-                                                        {{detalhes.id}}
+                                                        {{detalhe.id}}
                                                     </td>
                                                     <td>
-                                                        {{detalhes.horaInicio}}
+                                                        {{detalhe.horaInicio}}
                                                     </td>
                                                     <td>
-                                                        {{detalhes.horaTermino}}
+                                                        {{detalhe.horaTermino}}
                                                     </td>
                                                     <td>
-                                                        {{detalhes.descricaoDia}}
+                                                        {{detalhe.descricaoDia}}
                                                     </td>
                                                     <td>
                                                         <div>
                                                             <i class="fas fa-times" style="cursor: pointer;"
-                                                                ng-click="deleteReserva(reserva.Id)"></i>
+                                                                ng-click="desassociar(detalhe.id)"></i>
                                                         </div>
                                                     </td>
                                                 </tr>

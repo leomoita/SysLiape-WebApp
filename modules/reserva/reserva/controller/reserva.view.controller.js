@@ -20,6 +20,8 @@
       DataTermino: undefined,
     };
 
+    $scope.detalhes = [];
+
     $scope.cancel = cancel;
 
     function cancel() {
@@ -28,11 +30,20 @@
 
     function load() {
       reservaService
-        .getbyid($routeParams.Id)
+        .getById($routeParams.id)
         .then(function(retorno) {
           $scope.reserva = angular.copy(retorno);
         })
         .catch(function(error) {
+          console.log("erro: " + error);
+        });
+
+      reservaService
+        .getDetalhes($routeParams.id)
+        .then(function (retorno) {
+          $scope.detalhes = angular.copy(retorno);
+        })
+        .catch(function (error) {
           console.log("erro: " + error);
         });
     }

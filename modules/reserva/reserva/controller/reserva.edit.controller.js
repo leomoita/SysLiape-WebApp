@@ -60,11 +60,9 @@
       },
     ];
 
-    //$scope.update = update;
     $scope.cancel = cancel;
-
     $scope.associar = associar;
-    $scope.cancel = cancel;
+    $scope.desassociar = desassociar;
 
     function associar(detalhe) {
       reservaService
@@ -78,17 +76,17 @@
         });
     }
 
-    // function update(reserva) {
-    //   reservaService
-    //     .update($routeParams.id, reserva)
-    //     .then(function (retorno) {
-    //       alert("Reserva alterado com sucesso!");
-    //       cancel();
-    //     })
-    //     .catch(function (error) {
-    //       console.log("erro: " + error);
-    //     });
-    // }
+    function desassociar(idDetalhe) {
+      reservaService
+        .desassociar(idDetalhe)
+        .then(function (retorno) {
+          alert("Reserva deletada com sucesso!");
+          $route.reload();
+        })
+        .catch(function (error) {
+          console.log("erro: " + error);
+        });
+    }
 
     function cancel() {
       $location.url("/reserva");

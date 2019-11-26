@@ -47,6 +47,13 @@
           .catch(responseService.doError);
       },
 
+      desassociar: function(idDetalhe) {
+        return $http
+          .delete(defaultRoute + "reserva/desassociar/" + idDetalhe)
+          .then(responseService.doResponse)
+          .catch(responseService.doError);
+      },
+
       update: function(id, data) {
         return $http
           .put(defaultRoute + "reserva/" + id, data)

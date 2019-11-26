@@ -56,6 +56,7 @@
         reservaService
           .delete(id)
           .then(function() {
+            alert("Reserva deletada com sucesso!");
             $route.reload();
           })
           .catch(function(error) {
@@ -68,12 +69,12 @@
       $location.url("/reserva/new");
     }
 
-    function viewReserva(Id) {
-      $location.url("/reserva/view/" + Id);
+    function viewReserva(id) {
+      $location.url("/reserva/view/" + id);
     }
 
-    function editReserva(Id) {
-      $location.url("/reserva/edit/" + Id);
+    function editReserva(id) {
+      $location.url("/reserva/edit/" + id);
     }
 
     function load() {
