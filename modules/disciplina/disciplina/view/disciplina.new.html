@@ -1,0 +1,47 @@
+﻿<div class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="title">Inclusão de Disciplina</h5>
+                </div>
+                <div class="card-body">
+                    <form name="disciplinaNewForm">
+                        <div class="row">
+                            <div class="col-md-5 pr-md-1">
+                                <div class="form-group">
+                                    <label>Nome Disciplina</label>
+                                    <input type="text" class="form-control" placeholder="Nome Disciplina" minlength="0"
+                                        maxlength="150" required ng-model="disciplina.descricao"> 
+
+                                </div>
+                            </div>
+                            <div class="col-md-2 px-md-1">
+                                <label class="form-control-label">Professor</label>
+                                <select class="form-control" style="background-color: #27293d;" ng-options="p.id as p.nome for p in professores" 
+                                ng-model="disciplina.idProfessor" required>
+                                    <option value="" disabled>Selecione</option>
+                                </select>
+                            </div>
+                            <div class="col-md-2 px-md-1">
+                                <label class="form-control-label">Curso</label>
+                                <select class="form-control" style="background-color: #27293d;" ng-options="c.id as c.descricao for c in cursos" 
+                                ng-model="disciplina.idCurso" required>
+                                    <option value="" disabled>Selecione</option>
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div align="right">
+                    <div class="card-footer">
+                        <button type="submit" class="btn btn-fill btn-primary" ng-click="cancel()"><i class="fas fa-ban mr-2"></i>
+                            Cancelar</button>
+                        <button type="submit" class="btn btn-fill btn-primary" ng-click="save(disciplina)"><i class="fas fa-save mr-2"></i>
+                            Salvar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,71 @@
+<div class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card  card-plain">
+                <div class="card-header">
+                    <h4 class="card-title"> AD Grid</h4>
+                    <p class="category"> Todos os Usuários Active Directory</p>
+                </div>
+                <div class="row">
+                    <div style="margin-top: 4px" class="col-sm-6">
+                        <input class="form-control" type="text" ng-model="busca" placeholder="Qual usuário você está buscando?" />          
+                    </div>
+
+                    <div class="col-sm-4">
+                        <button class="btn btn-fill btn-primary" ng-click="buscar(busca)">Pesquisar</button>
+                        <button class="btn btn-fill btn-primary" ng-click="newUsuarioAd()">Adicionar</button>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <!-- <div class="table-responsive"> -->
+                    <table class="table tablesorter " id="">
+                        <thead class=" text-primary">
+                            <tr>
+                                <th>
+                                    Id
+                                </th>
+                                <th>
+                                    Nome
+                                </th>
+                                <th>
+                                    Código
+                                </th>
+                                <th>
+                                    Tipo
+                                </th>
+                                <th>
+                                    AÇÕES
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="usuario in usuariosAd">
+                                <td>
+                                    {{usuario.id}}
+                                </td>
+                                <td>
+                                    {{usuario.nome}}
+                                </td>
+                                <td>
+                                    {{usuario.codigo}}
+                                </td>
+                                <td>
+                                    {{usuario.descricaoTipo}}
+                                </td>
+                                <td>
+                                    <div>
+                                        <i class="fas fa-eye" style="cursor: pointer;" ng-click="viewUsuarioAd(usuario.id, usuario.tipo)"></i>
+                                        <i class="fas fa-edit" style="cursor: pointer;" ng-click="editUsuarioAd(usuario.id, usuario.tipo)"></i>
+                                        <i class="fas fa-times" style="cursor: pointer;" ng-click="deleteUsuarioAd(usuario.id, usuario.tipo)"></i>
+                                    </div>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                    <!-- </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

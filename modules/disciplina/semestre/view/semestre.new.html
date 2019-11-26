@@ -1,0 +1,40 @@
+﻿<div class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="title">Inclusão de Semestre</h5>
+                </div>
+                <div class="card-body">
+                    <form name="semestreNewForm">
+                        <div class="row">
+                            <div class="col-md-2 pr-md-1">
+                                <div class="form-group">
+                                    <label>Data Início</label>
+                                    <input type="date" class="form-control" required ng-model="semestre.dataInicio">
+                                </div>
+                            </div>
+                            <div class="col-md-2 px-md-1">
+                                <div class="form-group">
+                                    <label>Data Término</label>
+                                    <input type="date" class="form-control" required ng-model="semestre.dataTermino"
+                                        required>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div align="right">
+                    <div class="card-footer">
+                        <button type="submit" class="btn btn-fill btn-primary" ng-click="cancel()"><i
+                                class="fas fa-ban mr-2"></i>
+                            Cancelar</button>
+                        <button type="submit" class="btn btn-fill btn-primary" ng-click="save(semestre)"><i
+                                class="fas fa-save mr-2"></i>
+                            Salvar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

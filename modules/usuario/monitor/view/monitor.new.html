@@ -1,0 +1,57 @@
+﻿<div class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="title">Inclusão de Monitor</h5>
+                </div>
+                <div class="card-body">
+                    <form name="monitorNewForm">
+                        <div class="row">
+                            <div class="col-md-6 pr-md-1">
+                                <div class="form-group">
+                                    <label>Nome</label>
+                                    <input type="text" class="form-control" placeholder="Nome" minlength="0"
+                                        maxlength="50" required ng-model="monitor.nome">
+                                </div>
+                            </div>
+                            <div class="col-md-2 pr-md-1">
+                                <label class="form-control-label">Admin</label>
+                                <select style="background-color: #27293d;" class="form-control" ng-model="monitor.admin" 
+                                    ng-options="o.valor as o.texto for o in opcoesCombo" required>
+                                    <option value="" disabled>Selecione</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4 pr-md-1">
+                                <div class="form-group">
+                                    <label>Login</label>
+                                    <input type="text" class="form-control" placeholder="Login" minlength="0"
+                                        maxlength="15" required ng-model="monitor.login">
+                                </div>
+                            </div>
+                            <div class="col-md-4 pr-md-1">
+                                <div class="form-group">
+                                    <label>Senha</label>
+                                    <input type="password" class="form-control" placeholder="Senha" minlength="0"
+                                        maxlength="50" required ng-model="monitor.senha">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div align="right">
+                    <div class="card-footer">
+                        <button type="submit" class="btn btn-fill btn-primary" ng-click="cancel()"><i
+                                class="fas fa-ban mr-2"></i>
+                            Cancelar</button>
+                        <button type="submit" class="btn btn-fill btn-primary" ng-click="save(monitor)"><i
+                                class="fas fa-save mr-2"></i>
+                            Salvar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

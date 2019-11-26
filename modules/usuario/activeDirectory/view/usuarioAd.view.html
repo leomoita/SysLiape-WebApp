@@ -1,0 +1,56 @@
+﻿<div class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="title">Visualização de Usuário AD</h5>
+                </div>
+                <div class="card-body">
+                    <form name="usuarioAdViewForm">
+                        <div class="row">
+                            <div class="col-md-6 pr-md-1">
+                                <div class="form-group">
+                                    <label>Nome</label>
+                                    <label class="form-control">{{usuarioAd.nome}}</label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 pr-md-1">
+                                <div class="form-group">
+                                    <label>Código</label>
+                                    <label class="form-control">{{usuarioAd.codigo}}</label>
+                                </div>
+                            </div>
+                            <div class="col-md-2 pr-md-1">
+                                <div class="form-group">
+                                    <label>Tipo</label>
+                                    <label class="form-control">{{usuarioAd.descricaoTipo}}</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4 pr-md-1">
+                                <div class="form-group">
+                                    <label>Login</label>
+                                    <label class="form-control">{{usuarioAd.login}}</label>
+                                </div>
+                            </div>
+                            <div class="col-md-4 pr-md-1" ng-if="usuarioAd.tipo == 1">
+                                <div class="form-group">
+                                    <label>Curso</label>
+                                    <label class="form-control">{{usuarioAd.descricaoCurso}}</label>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div align="right">
+                    <div class="card-footer">
+                        <button type="submit" class="btn btn-fill btn-primary" ng-click="cancel()"><i
+                                class="fas fa-arrow-left mr-2"></i>
+                            Voltar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

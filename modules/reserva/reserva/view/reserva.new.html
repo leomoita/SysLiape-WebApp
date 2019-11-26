@@ -1,0 +1,71 @@
+﻿<div class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="title">Inclusão de Reserva</h5>
+                </div>
+                <div class="card-body">
+                    <form name="reservaNewForm">
+                        <div class="row">
+                            <div class="col-md-2 pr-md-1">
+                                <div class="form-group">
+                                    <label>Data Início</label>
+                                    <input type="date" class="form-control" placeholder="Data Início" required
+                                        ng-model="reserva.dataInicio">
+                                </div>
+                            </div>
+                            <div class="col-md-2 pr-md-1">
+                                <div class="form-group">
+                                    <label>Data Término</label>
+                                    <input type="date" class="form-control" placeholder="Data Término" required
+                                        ng-model="reserva.dataTermino">
+                                </div>
+                            </div>
+                            <div class="col-md-2 px-md-1">
+                                <div class="form-group">
+                                    <label>Disciplina</label>
+                                    <select class="form-control" style="background-color: #27293d;"
+                                        ng-options="d.id as d.descricao for d in disciplinas" ng-model="reserva.idDisciplina"
+                                        required>
+                                        <option value="" disabled>Selecione</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-2 px-md-1">
+                                <div class="form-group">
+                                    <label>Semestre</label>
+                                    <select class="form-control" style="background-color: #27293d;"
+                                        ng-options="s.id as s.descricao for s in semestres" ng-model="reserva.idSemestre"
+                                        required>
+                                        <option value="" disabled>Selecione</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-2 px-md-1">
+                                <div class="form-group">
+                                    <label>Sala</label>
+                                    <select class="form-control" style="background-color: #27293d;"
+                                        ng-options="s.id as s.descricao for s in salas" ng-model="reserva.idSala"
+                                        required>
+                                        <option value="" disabled>Selecione</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div align="right">
+                    <div class="card-footer">
+                        <button type="submit" class="btn btn-fill btn-primary" ng-click="cancel()"><i
+                                class="fas fa-ban mr-2"></i>
+                            Cancelar</button>
+                        <button type="submit" class="btn btn-fill btn-primary" ng-click="save(reserva)"><i
+                                class="fas fa-save mr-2"></i>
+                            Salvar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

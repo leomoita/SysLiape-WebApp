@@ -1,0 +1,70 @@
+<div class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card  card-plain">
+                <div class="card-header">
+                    <h4 class="card-title"> Salas</h4>
+                    <p class="category"> Todos as Salas</p>
+                </div>
+                <div class="row">
+                    <div style="margin-top: 4px" class="col-sm-6">
+                        <input class="form-control" type="text" ng-model="busca" placeholder="Qual sala você está buscando?" />          
+                    </div>
+
+                    <div class="col-sm-4">
+                        <button class="btn btn-fill btn-primary" ng-click="buscar(busca)">Pesquisar</button>
+                        <button class="btn btn-fill btn-primary" ng-click="newSala()">Adicionar</button>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <!-- <div class="table-responsive"> -->
+                    <table class="table tablesorter " id="">
+                        <thead class=" text-primary">
+                            <tr>
+                                <th>
+                                    Id
+                                </th>
+                                <th>
+                                    Bloco
+                                </th>
+                                <th>
+                                    Número
+                                </th>
+                                <th>
+                                    Status
+                                </th>
+                                <th>
+                                    AÇÕES
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="sala in salas">
+                                <td>
+                                    {{sala.id}}
+                                </td>
+                                <td>
+                                    {{sala.descricaoBloco}}
+                                </td>
+                                <td>
+                                    {{sala.numero}}
+                                </td>
+                                <td>
+                                    {{sala.descricaoStatus}}
+                                </td>
+                                <td>
+                                    <div>
+                                        <i class="fas fa-edit" style="cursor: pointer;" ng-click="editSala(sala.id)"></i>
+                                        <i class="fas fa-times" style="cursor: pointer;" ng-click="deleteSala(sala.id)"></i>
+                                    </div>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                    <!-- </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

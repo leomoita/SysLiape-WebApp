@@ -1,0 +1,508 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR" ng-app="app">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+  <title>
+    Sistema de Gerenciamento - SISGER
+  </title>
+
+  <link href="../assets/css/black-dashboard.css?v=1.0.0" rel="stylesheet" />
+  <link href="../assets/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="./assets/css/login.css" rel="stylesheet" />
+
+  <!--Angular Imports-->
+  <script src="scripts/libs/angular/angular.js"></script>
+  <script src="scripts/libs/angular/angular-route.js"></script>
+  <script src="scripts/app.js"></script>
+
+  <!-- Factorys -->
+  <script src="scripts/factorys/responseService.factory.js"></script>
+
+
+  <!-- Routes BEGIN -->
+
+  <!-- Disciplina -->
+  <script src="modules/disciplina/curso/curso.route.js"></script>
+  <script src="modules/disciplina/disciplina/disciplina.route.js"></script>
+  <script src="modules/disciplina/semestre/semestre.route.js"></script>
+
+  <!-- Geral -->
+  <script src="modules/geral/ramal/ramal.route.js"></script>
+
+  <!-- Home -->
+  <script src="modules/home/home.route.js"></script>
+
+  <!-- Perfil -->
+  <script src="modules/perfil/perfil.route.js"></script>  
+
+  <!-- Login -->
+  <script src="modules/login/login.route.js"></script>
+
+  <!-- Reserva -->
+  <script src="modules/reserva/bloco/bloco.route.js"></script>
+  <script src="modules/reserva/reserva/reserva.route.js"></script>
+  <script src="modules/reserva/sala/sala.route.js"></script>
+
+  <!-- Usuario -->
+  <script src="modules/usuario/activeDirectory/usuarioAd.route.js"></script>
+  <script src="modules/usuario/monitor/monitor.route.js"></script>
+
+  <!-- Routes END -->
+
+
+  <!-- Services BEGIN -->
+
+  <!-- Disciplina -->
+  <script src="modules/disciplina/curso/service/curso.service.js"></script>
+  <script src="modules/disciplina/disciplina/service/disciplina.service.js"></script>
+  <script src="modules/disciplina/semestre/service/semestre.service.js"></script>
+
+  <!-- Geral -->
+  <script src="modules/geral/ramal/service/ramal.service.js"></script>
+
+  <!-- Home -->
+  <script src="modules/home/service/home.service.js"></script>
+
+  <!-- Perfil -->
+  <script src="modules/perfil/service/perfil.service.js"></script>
+
+  <!-- Login -->
+  <script src="modules/login/service/login.service.js"></script>
+
+  <!-- Reserva -->
+  <script src="modules/reserva/bloco/service/bloco.service.js"></script>
+  <script src="modules/reserva/reserva/service/reserva.service.js"></script>
+  <script src="modules/reserva/sala/service/sala.service.js"></script>
+
+  <!-- Usuario -->
+  <script src="modules/usuario/activeDirectory/service/usuarioAd.service.js"></script>
+  <script src="modules/usuario/monitor/service/monitor.service.js"></script>
+
+  <!-- Services END-->
+
+  <script src="scripts/providers/config.js"></script>
+
+  <!-- Controllers BEGIN-->
+
+  <script src="scripts/applicationController.js"></script>
+
+  <!-- Disciplina -->
+  <script src="modules/disciplina/curso/controller/curso.new.controller.js"></script>
+  <script src="modules/disciplina/curso/controller/curso.grid.controller.js"></script>
+  <script src="modules/disciplina/curso/controller/curso.view.controller.js"></script>
+  <script src="modules/disciplina/curso/controller/curso.edit.controller.js"></script>
+
+  <script src="modules/disciplina/disciplina/controller/disciplina.new.controller.js"></script>
+  <script src="modules/disciplina/disciplina/controller/disciplina.grid.controller.js"></script>
+  <script src="modules/disciplina/disciplina/controller/disciplina.view.controller.js"></script>
+  <script src="modules/disciplina/disciplina/controller/disciplina.edit.controller.js"></script>
+
+  <script src="modules/disciplina/semestre/controller/semestre.new.controller.js"></script>
+  <script src="modules/disciplina/semestre/controller/semestre.grid.controller.js"></script>
+  <script src="modules/disciplina/semestre/controller/semestre.view.controller.js"></script>
+  <script src="modules/disciplina/semestre/controller/semestre.edit.controller.js"></script>
+
+  <!-- Geral -->
+  <script src="modules/geral/ramal/controller/ramal.grid.controller.js"></script>
+  <script src="modules/geral/ramal/controller/ramal.new.controller.js"></script>
+  <script src="modules/geral/ramal/controller/ramal.edit.controller.js"></script>
+
+  <!-- Home -->
+  <script src="modules/home/controller/home.controller.js"></script>
+
+  <!-- Perfil -->
+  <script src="modules/perfil/controller/perfil.controller.js"></script>  
+
+  <!-- Login -->
+  <script src="modules/login/controller/login.controller.js"></script>
+
+  <!-- Reserva -->
+  <script src="modules/reserva/bloco/controller/bloco.new.controller.js"></script>
+  <script src="modules/reserva/bloco/controller/bloco.grid.controller.js"></script>
+  <script src="modules/reserva/bloco/controller/bloco.edit.controller.js"></script>
+
+  <script src="modules/reserva/reserva/controller/reserva.new.controller.js"></script>
+  <script src="modules/reserva/reserva/controller/reserva.grid.controller.js"></script>
+  <script src="modules/reserva/reserva/controller/reserva.view.controller.js"></script>
+  <script src="modules/reserva/reserva/controller/reserva.edit.controller.js"></script>
+
+  <script src="modules/reserva/sala/controller/sala.new.controller.js"></script>
+  <script src="modules/reserva/sala/controller/sala.grid.controller.js"></script>
+  <script src="modules/reserva/sala/controller/sala.edit.controller.js"></script>
+
+  <!-- Usuario -->
+  <script src="modules/usuario/activeDirectory/controller/usuarioAd.new.controller.js"></script>
+  <script src="modules/usuario/activeDirectory/controller/usuarioAd.grid.controller.js"></script>  
+  <script src="modules/usuario/activeDirectory/controller/usuarioAd.view.controller.js"></script>  
+  <script src="modules/usuario/activeDirectory/controller/usuarioAd.edit.controller.js"></script>  
+
+  <script src="modules/usuario/monitor/controller/monitor.new.controller.js"></script>
+  <script src="modules/usuario/monitor/controller/monitor.grid.controller.js"></script>
+  <script src="modules/usuario/monitor/controller/monitor.view.controller.js"></script>
+  <script src="modules/usuario/monitor/controller/monitor.edit.controller.js"></script>
+  
+  <!-- Controllers END-->
+
+  <!-- Template -->
+  <!--   Core JS Files   -->
+  <script src="../assets/js/core/jquery.min.js" type="text/javascript"></script>
+  <script src="../assets/js/core/popper.min.js" type="text/javascript"></script>
+  <script src="../assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+  <script src="../assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+
+  <!-- Chartist JS -->
+  <script src="../assets/js/plugins/chartjs.min.js"></script>
+  <!--  Notifications Plugin    -->
+  <script src="../assets/js/plugins/bootstrap-notify.js"></script>
+  <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="../assets/js/black-dashboard.js?v=1.0.0" type="text/javascript"></script>
+
+  <!-- Fontawesome -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet">
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+  <!-- Nucleo Icons -->
+  <link href="../assets/css/nucleo-icons.css" rel="stylesheet" />
+</head>
+
+<body class="" ng-controller="applicationController">
+  <div class="wrapper">
+    <div class="sidebar">
+      <!--
+        Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red"
+    -->
+      <div class="sidebar-wrapper">
+        <div class="logo">
+            <img src="./assets/images/logo.png" alt="Avatar" class="text-center avatar">
+        </div>
+        <ul class="nav">
+          <li class="active ">
+            <a ng-click="goTo('/home')">
+              <i class="tim-icons icon-chart-pie-36"></i>
+              <p>Home</p>
+            </a>
+          </li>
+          <li>
+            <a data-toggle="collapse" href="#usuarios" class="collapsed" aria-expanded="false">
+              <i class="tim-icons icon-image-02"></i>
+              <p>
+                Usuarios
+                <b class="caret"></b>
+              </p>
+            </a>
+            <div class="collapse" id="usuarios">
+              <ul class="nav">
+                <li>
+                  <a ng-click="goTo('/usuario/ad')">
+                    <span class="sidebar-mini-icon">P</span>
+                    <span class="sidebar-normal"> AD </span>
+                  </a>
+                </li>
+                <li>
+                  <a ng-click="goTo('/usuario/monitor')">
+                    <span class="sidebar-mini-icon">RS</span>
+                    <span class="sidebar-normal"> Monitor </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a data-toggle="collapse" href="#basico" class="collapsed" aria-expanded="false">
+              <i class="tim-icons icon-image-02"></i>
+              <p>
+                Basicos
+                <b class="caret"></b>
+              </p>
+            </a>
+            <div class="collapse" id="basico">
+              <ul class="nav">
+                <li>
+                  <a ng-click="goTo('/basico/bloco')">
+                    <span class="sidebar-mini-icon">P</span>
+                    <span class="sidebar-normal"> Blocos </span>
+                  </a>
+                </li>
+                <li>
+                  <a ng-click="goTo('/basico/curso')">
+                    <span class="sidebar-mini-icon">RS</span>
+                    <span class="sidebar-normal"> Cursos </span>
+                  </a>
+                </li>
+                <li>
+                  <a ng-click="goTo('/basico/disciplina')">
+                    <span class="sidebar-mini-icon">RS</span>
+                    <span class="sidebar-normal"> Disciplinas </span>
+                  </a>
+                </li>
+                <li>
+                  <a ng-click="goTo('/basico/sala')">
+                    <span class="sidebar-mini-icon">RS</span>
+                    <span class="sidebar-normal"> Salas </span>
+                  </a>
+                </li>
+                <li>
+                  <a ng-click="goTo('/basico/semestre')">
+                    <span class="sidebar-mini-icon">RS</span>
+                    <span class="sidebar-normal"> Semestres </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a ng-click="goTo('/reserva')">
+              <i class="tim-icons icon-pin"></i>
+              <p>Reserva</p>
+            </a>
+          </li>
+          <li>
+            <a data-toggle="collapse" href="#outros" class="collapsed" aria-expanded="false">
+              <i class="tim-icons icon-image-02"></i>
+              <p>
+                Outros
+                <b class="caret"></b>
+              </p>
+            </a>
+            <div class="collapse" id="outros">
+              <ul class="nav">
+                <li>
+                  <a ng-click="goTo('/outros/ramal')">
+                    <span class="sidebar-mini-icon">P</span>
+                    <span class="sidebar-normal"> Ramal </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="main-panel">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-absolute navbar-transparent">
+        <div class="container-fluid">
+          <div class="navbar-wrapper">
+            <div class="navbar-toggle d-inline">
+              <button type="button" class="navbar-toggler">
+                <span class="navbar-toggler-bar bar1"></span>
+                <span class="navbar-toggler-bar bar2"></span>
+                <span class="navbar-toggler-bar bar3"></span>
+              </button>
+            </div>
+            <a class="navbar-brand" href="javascript:void(0)">SYSLIAPE</a>
+          </div>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navigation">
+            <ul class="navbar-nav ml-auto">
+              <li class="dropdown nav-item">
+                <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                  <div class="photo">
+                    <img src="../assets/img/anime3.png" alt="Profile Photo">
+                  </div>
+                  <b class="caret d-none d-lg-block d-xl-block"></b>
+                  <p class="d-lg-none">
+                    Sair
+                  </p>
+                </a>
+                <ul style="background-color: #27293d;" class="dropdown-menu dropdown-navbar">
+                  <li class="nav-link"><a ng-click="goTo('/perfil')" class="nav-item dropdown-item">Perfil</a></li>
+                  <li class="dropdown-divider"></li>
+                  <li class="nav-link"><a ng-click="goTo('/login')" class="nav-item dropdown-item">Sair</a></li>
+                </ul>
+              </li>
+              <li class="separator d-lg-none"></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="modal modal-search fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModal"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="SEARCH">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <i class="tim-icons icon-simple-remove"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Navbar -->
+      <div class="content">
+        <div ng-view></div>
+      </div>
+      <footer class="footer">
+        <div class="container-fluid">
+          <div class="copyright">
+            ©
+            <script>
+              document.write(new Date().getFullYear())
+            </script> Feito pela equipe de Desenvolvimento UNAERP.
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+  <div class="fixed-plugin">
+    <div class="dropdown show-dropdown">
+      <a href="#" data-toggle="dropdown">
+        <i class="fa fa-cog fa-2x"> </i>
+      </a>
+      <ul class="dropdown-menu">
+        <li class="header-title"> Cor do Background</li>
+        <li class="adjustments-line">
+          <a href="javascript:void(0)" class="switch-trigger background-color">
+            <div class="badge-colors text-center">
+              <span class="badge filter badge-primary active" data-color="primary"></span>
+              <span class="badge filter badge-info" data-color="blue"></span>
+              <span class="badge filter badge-success" data-color="green"></span>
+            </div>
+            <div class="clearfix"></div>
+          </a>
+        </li>
+        <li class="adjustments-line text-center color-change">
+          <span class="color-label">LIGHT MODE</span>
+          <span class="badge light-badge mr-2"></span>
+          <span class="badge dark-badge ml-2"></span>
+          <span class="color-label">DARK MODE</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Control Center for Black Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="../assets/js/black-dashboard.min.js?v=1.0.0"></script>
+  <!-- Black Dashboard DEMO methods, don't include it in your project! -->
+
+  <script>
+    $(document).ready(function () {
+      $().ready(function () {
+        $sidebar = $('.sidebar');
+        $navbar = $('.navbar');
+        $main_panel = $('.main-panel');
+
+        $full_page = $('.full-page');
+
+        $sidebar_responsive = $('body > .navbar-collapse');
+        sidebar_mini_active = true;
+        white_color = false;
+
+        window_width = $(window).width();
+
+        fixed_plugin_open = $('.sidebar .sidebar-wrapper .nav li.active a p').html();
+
+
+
+        $('.fixed-plugin a').click(function (event) {
+          if ($(this).hasClass('switch-trigger')) {
+            if (event.stopPropagation) {
+              event.stopPropagation();
+            } else if (window.event) {
+              window.event.cancelBubble = true;
+            }
+          }
+        });
+
+        $('.fixed-plugin .background-color span').click(function () {
+          $(this).siblings().removeClass('active');
+          $(this).addClass('active');
+
+          var new_color = $(this).data('color');
+
+          if ($sidebar.length != 0) {
+            $sidebar.attr('data', new_color);
+          }
+
+          if ($main_panel.length != 0) {
+            $main_panel.attr('data', new_color);
+          }
+
+          if ($full_page.length != 0) {
+            $full_page.attr('filter-color', new_color);
+          }
+
+          if ($sidebar_responsive.length != 0) {
+            $sidebar_responsive.attr('data', new_color);
+          }
+        });
+
+        $('.switch-sidebar-mini input').on("switchChange.bootstrapSwitch", function () {
+          var $btn = $(this);
+
+          if (sidebar_mini_active == true) {
+            $('body').removeClass('sidebar-mini');
+            sidebar_mini_active = false;
+            blackDashboard.showSidebarMessage('Sidebar mini deactivated...');
+          } else {
+            $('body').addClass('sidebar-mini');
+            sidebar_mini_active = true;
+            blackDashboard.showSidebarMessage('Sidebar mini activated...');
+          }
+
+          // we simulate the window Resize so the charts will get updated in realtime.
+          var simulateWindowResize = setInterval(function () {
+            window.dispatchEvent(new Event('resize'));
+          }, 180);
+
+          // we stop the simulation of Window Resize after the animations are completed
+          setTimeout(function () {
+            clearInterval(simulateWindowResize);
+          }, 1000);
+        });
+
+        $('.switch-change-color input').on("switchChange.bootstrapSwitch", function () {
+          var $btn = $(this);
+
+          if (white_color == true) {
+
+            $('body').addClass('change-background');
+            setTimeout(function () {
+              $('body').removeClass('change-background');
+              $('body').removeClass('white-content');
+            }, 900);
+            white_color = false;
+          } else {
+
+            $('body').addClass('change-background');
+            setTimeout(function () {
+              $('body').removeClass('change-background');
+              $('body').addClass('white-content');
+            }, 900);
+
+            white_color = true;
+          }
+
+
+        });
+
+        $('.light-badge').click(function () {
+          $('body').addClass('white-content');
+        });
+
+        $('.dark-badge').click(function () {
+          $('body').removeClass('white-content');
+        });
+      });
+    });
+  </script>
+  <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
+  <script>
+    window.TrackJS &&
+      TrackJS.install({
+        token: "ee6fab19c5a04ac1a32a645abde4613a",
+        application: "black-dashboard-free"
+      });
+  </script>
+</body>
+
+</html>

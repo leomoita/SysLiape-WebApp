@@ -1,0 +1,71 @@
+<div class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card  card-plain">
+                <div class="card-header">
+                    <h4 class="card-title"> Disciplinas </h4>
+                    <p class="category"> Todos as Disciplinas</p>
+                </div>
+                <div class="row">
+                    <div style="margin-top: 4px" class="col-sm-6">
+                        <input class="form-control" type="text" ng-model="busca" placeholder="Qual disciplina você está buscando?" />          
+                    </div>
+
+                    <div class="col-sm-4">
+                        <button class="btn btn-fill btn-primary" ng-click="buscar(busca)">Pesquisar</button>
+                        <button class="btn btn-fill btn-primary" ng-click="newDisciplina()">Adicionar</button>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <!-- <div class="table-responsive"> -->
+                    <table class="table tablesorter " id="">
+                        <thead class=" text-primary">
+                            <tr>
+                                <th>
+                                    Id
+                                </th>
+                                <th>
+                                    Nome
+                                </th>
+                                <th>
+                                    Professor
+                                </th>
+                                <th>
+                                    Curso
+                                </th>
+                                <th>
+                                    AÇÕES
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="disciplina in disciplinas">
+                                <td>
+                                    {{disciplina.id}}
+                                </td>
+                                <td>
+                                    {{disciplina.descricao}}
+                                </td>
+                                <td>
+                                    {{disciplina.descricaoProfessor}}
+                                </td>
+                                <td>
+                                    {{disciplina.descricaoCurso}}
+                                </td>
+                                <td>
+                                    <div>
+                                        <i class="fas fa-eye" style="cursor: pointer;" ng-click="viewDisciplina(disciplina.id)"></i>
+                                        <i class="fas fa-edit" style="cursor: pointer;" ng-click="editDisciplina(disciplina.id)"></i>
+                                        <i class="fas fa-times" style="cursor: pointer;" ng-click="deleteDisciplina(disciplina.id)"></i>
+                                    </div>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                    <!-- </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

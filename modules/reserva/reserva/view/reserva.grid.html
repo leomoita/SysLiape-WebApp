@@ -1,0 +1,83 @@
+<div class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card  card-plain">
+                <div class="card-header">
+                    <h4 class="card-title"> Reserva de Salas </h4>
+                    <p class="category"> Todos as Salas Reservadas</p>
+                </div>
+                <div class="row">
+                    <div style="margin-top: 4px" class="col-sm-6">
+                        <input class="form-control" type="text" ng-model="busca" placeholder="Qual curso você está buscando?" />          
+                    </div>
+
+                    <div class="col-sm-4">
+                        <button class="btn btn-fill btn-primary" ng-click="buscar(busca)">Pesquisar</button>
+                        <button class="btn btn-fill btn-primary" ng-click="newReserva()">Adicionar</button>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <!-- <div class="table-responsive"> -->
+                    <table class="table tablesorter " id="">
+                        <thead class=" text-primary">
+                            <tr>
+                                <th>
+                                    Id
+                                </th>
+                                <th>
+                                    Sala
+                                </th>
+                                <th>
+                                    Disciplina
+                                </th>
+                                <th>
+                                    Semestre
+                                </th>
+                                <th>
+                                    Data Início
+                                </th>
+                                <th>
+                                    Data Término
+                                </th>
+                                <th>
+                                    AÇÕES
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="reserva in reservas">
+                                <td>
+                                    {{reserva.id}}
+                                </td>
+                                <td>
+                                    {{reserva.descricaoSala}}
+                                </td>
+                                <td>
+                                    {{reserva.descricaoDisciplina}}
+                                </td>
+                                <td>
+                                    {{reserva.descricaoSemestre}}
+                                </td>
+                                <td>
+                                    {{reserva.dataInicio | date:'dd/MM/yyyy'}}
+                                </td>
+                                <td>
+                                    {{reserva.dataTermino | date:'dd/MM/yyyy'}}
+                                </td>
+                                <td>
+                                    <div>
+                                        <i class="fas fa-eye" style="cursor: pointer;" ng-click="viewReserva(reserva.id)"></i>
+                                        <i class="fas fa-edit" style="cursor: pointer;" ng-click="editReserva(reserva.id)"></i>
+                                        <i class="fas fa-times" style="cursor: pointer;" ng-click="deleteReserva(reserva.id)"></i>
+                                    </div>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                    <!-- </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,44 @@
+<div class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="title">Visualização de Monitor</h5>
+                </div>
+                <div class="card-body">
+                    <form name="monitorViewForm">
+                        <div class="row">
+                            <div class="col-md-6 pr-md-1">
+                                <div class="form-group">
+                                    <label>Nome</label>
+                                    <label class="form-control">{{monitor.nome}}</label>
+                                </div>
+                            </div>
+                            <div class="col-md-2 pr-md-1">
+                                <div class="form-group">
+                                    <label>Admin</label>
+                                    <label class="form-control">{{monitor.descricaoAdmin}}</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4 pr-md-1">
+                                <div class="form-group">
+                                    <label>Login</label>
+                                    <label class="form-control">{{monitor.login}}</label>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div align="right">
+                    <div class="card-footer">
+                        <button type="submit" class="btn btn-fill btn-primary" ng-click="cancel()"><i
+                                class="fas fa-arrow-left mr-2"></i>
+                            Voltar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,40 @@
+<div class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="title">Edição de Curso</h5>
+                </div>
+                <div class="card-body">
+                    <form name="cursoEditForm">
+                        <div class="row">
+                            <div class="col-md-3 pr-md-1">
+                                <label class="form-control-label">Período</label>
+                                <select style="background-color: #27293d;" class="form-control" ng-model="curso.periodo" required>
+                                    <option value="" disabled>Selecione</option>
+                                    <option value="D">Diurno</option>
+                                    <option value="N">Noturno</option>
+                                </select>
+                            </div>
+                            <div class="col-md-2 px-md-1">
+                                <div class="form-group">
+                                    <label>Descrição</label>
+                                    <input type="text" class="form-control" placeholder="Descrição" ng-model="curso.descricao"
+                                        required>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div align="right">
+                    <div class="card-footer">
+                        <button type="submit" class="btn btn-fill btn-primary" ng-click="cancel()"><i class="fas fa-ban mr-2"></i>
+                            Cancelar</button>
+                        <button type="submit" class="btn btn-fill btn-primary" ng-click="update(curso)"><i class="fas fa-save mr-2"></i>
+                            Salvar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

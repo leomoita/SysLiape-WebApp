@@ -1,0 +1,71 @@
+﻿<div class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card  card-plain">
+                <div class="card-header">
+                    <h4 class="card-title"> Ramal </h4>
+                    <p class="category"> Todos os Ramais</p>
+                </div>
+                <div class="row">
+                    <div style="margin-top: 4px" class="col-sm-6">
+                        <input class="form-control" type="text" ng-model="busca" placeholder="Qual ramal você está buscando?" />          
+                    </div>
+
+                    <div class="col-sm-4">
+                        <button class="btn btn-fill btn-primary" ng-click="buscar(busca)">Pesquisar</button>
+                        <button class="btn btn-fill btn-primary" ng-click="newRamal()">Adicionar</button>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <!-- <div class="table-responsive"> -->
+                    <table class="table tablesorter " id="">
+                        <thead class=" text-primary">
+                            <tr>
+                                <th>
+                                    Id
+                                </th>
+                                <th>
+                                    Nome
+                                </th>
+                                <th>
+                                    Departamento
+                                </th>
+                                <th>
+                                    Número
+                                </th>
+
+                                <th>
+                                    AÇÕES
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="ramal in ramais">
+                                <td>
+                                    {{ramal.id}}
+                                </td>
+                                <td>
+                                    {{ramal.nome}}
+                                </td>
+                                <td>
+                                    {{ramal.departamento}}
+                                </td>
+                                <td>
+                                    {{ramal.numero}}
+                                </td>
+                                <td>
+                                    <div>
+                                        <i class="fas fa-edit" style="cursor: pointer;" ng-click="editRamal(ramal.id)"></i>
+                                        <i class="fas fa-times" style="cursor: pointer;" ng-click="deleteRamal(ramal.id)"></i>
+                                    </div>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                    <!-- </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

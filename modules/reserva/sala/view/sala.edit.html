@@ -1,0 +1,50 @@
+<div class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="title">Edição de Sala</h5>
+                </div>
+                <div class="card-body">
+                    <form name="salaEditForm">
+                        <div class="row">
+                            <div class="col-md-2 px-md-1">
+                                <label class="form-control-label">Bloco</label>
+                                <select class="form-control" style="background-color: #27293d;" ng-options="b.id as b.descricao for b in blocos" 
+                                ng-model="sala.idBloco" required>
+                                    <option value="" disabled>Selecione</option>
+                                </select>
+                            </div>
+                            <!-- combobox -->
+                            <div class="col-md-2 pr-md-1">
+                                <div class="form-group">
+                                    <label>Número</label>
+                                    <input type="number" class="form-control" placeholder="Número da Sala" required ng-model="sala.numero">
+                                </div>
+                            </div>
+                            <div class="col-md-3 pr-md-1">
+                                <label class="form-control-label">Status</label>
+                                <select style="background-color: #27293d;" class="form-control" ng-model="sala.status" required>
+                                    <option value="" disabled>Selecione</option>
+                                    <option value="D">Disponível</option>
+                                    <option value="O">Ocupado</option>
+                                    <option value="M">Manutenção</option>
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div align="right">
+                    <div class="card-footer">
+                        <button type="submit" class="btn btn-fill btn-primary" ng-click="cancel()"><i
+                                class="fas fa-ban mr-2"></i>
+                            Cancelar</button>
+                        <button type="submit" class="btn btn-fill btn-primary" ng-click="update(sala)"><i
+                                class="fas fa-save mr-2"></i>
+                            Salvar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

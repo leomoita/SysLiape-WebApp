@@ -1,0 +1,60 @@
+<div class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card  card-plain">
+                <div class="card-header">
+                    <h4 class="card-title"> Horários do dia</h4>
+                    <!-- <p class="category"> Todos os Cursos</p> -->
+                </div>
+                <div class="row">
+                    <div style="margin-top: 4px" class="col-sm-6">
+                        <input class="form-control" type="text" ng-model="busca" placeholder="Qual horário você está buscando?" />          
+                    </div>
+
+                    <div class="col-sm-4">
+                        <button class="btn btn-fill btn-primary" ng-click="buscar(busca)">Pesquisar</button>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <!-- <div class="table-responsive"> -->
+                    <table class="table tablesorter " id="">
+                        <thead class=" text-primary">
+                            <tr>
+                                <th>
+                                    Sala
+                                </th>
+                                <th>
+                                    Bloco
+                                </th>
+                                <th>
+                                    Professor
+                                </th>
+                                <th>
+                                    Horário
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="home in homes">
+                                <td>
+                                    {{home.Sala}}
+                                </td>
+                                <td>
+                                    {{home.Bloco}}
+                                </td>
+                                <td>
+                                    {{home.Professor}}
+                                </td>
+                                <td>
+                                    {{home.Horario}}
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                    <!-- </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

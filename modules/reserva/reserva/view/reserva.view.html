@@ -1,0 +1,107 @@
+<div class="content">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="title">Visualização de Reserva</h5>
+                    </div>
+                    <div class="card-body">
+                        <form name="reservaNewForm">
+                            <div class="row">
+                                <div class="col-md-2 pr-md-1">
+                                    <div class="form-group">
+                                        <label>Data Início</label>
+                                        <label class="form-control">{{reserva.dataInicio | date:'dd/MM/yyyy'}}</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 pr-md-1">
+                                    <div class="form-group">
+                                        <label>Data Término</label>
+                                        <label class="form-control">{{reserva.dataTermino | date:'dd/MM/yyyy'}}</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 px-md-1">
+                                    <div class="form-group">
+                                        <label>Disciplina</label>
+                                        <label class="form-control">{{reserva.idDiciplina}}</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 px-md-1">
+                                    <div class="form-group">
+                                        <label>Semestre</label>
+                                        <label class="form-control">{{reserva.idSemestre}}</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 px-md-1">
+                                    <div class="form-group">
+                                        <label>Sala</label>
+                                        <label class="form-control">{{reserva.idSala}}</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+    
+                        <div class="content">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="card  card-plain">
+                                        <div class="card-header">
+                                            <h4 class="card-title"> Detalhes </h4>
+                                        </div>
+                                        <div class="card-body">
+                                            <!-- <div class="table-responsive"> -->
+                                            <table class="table tablesorter " id="">
+                                                <thead class=" text-primary">
+                                                    <tr>
+                                                        <th>
+                                                            Id
+                                                        </th>
+                                                        <th>
+                                                            Hora Início
+                                                        </th>
+                                                        <th>
+                                                            Hora Término
+                                                        </th>
+                                                        <th>
+                                                            Dia
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr ng-repeat="detalhe in detalhes">
+                                                        <td>
+                                                            {{detalhe.id}}
+                                                        </td>
+                                                        <td>
+                                                            {{detalhe.horaInicio}}
+                                                        </td>
+                                                        <td>
+                                                            {{detalhe.horaTermino}}
+                                                        </td>
+                                                        <td>
+                                                            {{detalhes.descricaoDia}}
+                                                        </td>
+                                                    </tr>
+    
+                                                </tbody>
+                                            </table>
+                                            <!-- </div> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+    
+                    </div>
+                    <div align="right">
+                        <div class="card-footer">
+                            <button type="submit" class="btn btn-fill btn-primary" ng-click="cancel()"><i
+                                    class="fas fa-ban mr-2"></i>
+                                Cancelar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

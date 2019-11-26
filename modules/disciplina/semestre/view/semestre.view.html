@@ -1,0 +1,36 @@
+<div class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="title">Visualização de Semestre</h5>
+                </div>
+                <div class="card-body">
+                    <form name="semestreViewForm">
+                        <div class="row">
+                            <div class="col-md-2 pr-md-1">
+                                <div class="form-group">
+                                    <label>Data Início</label>
+                                    <label class="form-control">{{semestre.dataInicio | date:'dd/MM/yyyy'}}</label>
+                                </div>
+                            </div>
+                            <div class="col-md-2 px-md-1">
+                                <div class="form-group">
+                                    <label>Data Término</label>
+                                    <label class="form-control">{{semestre.dataTermino | date:'dd/MM/yyyy'}}</label>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div align="right">
+                    <div class="card-footer">
+                        <button type="submit" class="btn btn-fill btn-primary" ng-click="cancel()"><i
+                            class="fas fa-arrow-left mr-2"></i>
+                        Voltar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
